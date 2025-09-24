@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "boards-api-client"
+version = "0.1.0"
+description = "Python client for IntoBridge API"
+authors = ["IntoBridge Team"]
+readme = "README.md"
+packages = [{include = "boards_api_client"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.31.0"
+click = "^8.1.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+
+[tool.poetry.scripts]
+boards-api = "boards_api_client.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
